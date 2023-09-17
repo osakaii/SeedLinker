@@ -1,20 +1,4 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-/*
-  This example requires Tailwind CSS v2.0+ 
-  
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
-*/
 import {
   StarIcon as ChatAltIcon,
   DocumentReportIcon,
@@ -30,50 +14,42 @@ import {
 const features = [
   {
     name: "Unlimited Inboxes",
-    description:
-      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
+    description: "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
     icon: InboxIcon,
   },
   {
     name: "Manage Team Members",
-    description:
-      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
+    description: "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
     icon: UsersIcon,
   },
   {
     name: "Spam Report",
-    description:
-      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
+    description: "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
     icon: TrashIcon,
   },
   {
     name: "Compose in Markdown",
-    description:
-      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
+    description: "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
     icon: PencilAltIcon,
   },
   {
     name: "Team Reporting",
-    description:
-      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
+    description: "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
     icon: DocumentReportIcon,
   },
   {
     name: "Saved Replies",
-    description:
-      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
+    description: "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
     icon: ReplyIcon,
   },
   {
     name: "Email Commenting",
-    description:
-      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
+    description: "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
     icon: ChatAltIcon,
   },
   {
     name: "Connect with Customers",
-    description:
-      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
+    description: "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
     icon: HeartIcon,
   },
 ];
@@ -217,14 +193,11 @@ export default function Example() {
               <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
                 <h1 className="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
                   <span className="block text-white">Take control of your</span>
-                  <span className="block text-indigo-200">
-                    customer support
-                  </span>
+                  <span className="block text-indigo-200">customer support</span>
                 </h1>
                 <p className="mt-6 max-w-lg mx-auto text-center text-xl text-indigo-200 sm:max-w-3xl">
-                  Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure
-                  qui lorem cupidatat commodo. Elit sunt amet fugiat veniam
-                  occaecat fugiat aliqua.
+                  Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
+                  fugiat aliqua.
                 </p>
                 <div className="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
                   <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
@@ -250,44 +223,22 @@ export default function Example() {
         {/* Logo Cloud */}
         <div className="bg-gray-100">
           <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-            <p className="text-center text-sm font-semibold uppercase text-gray-500 tracking-wide">
-              Trusted by over 5 very average small businesses
-            </p>
+            <p className="text-center text-sm font-semibold uppercase text-gray-500 tracking-wide">Trusted by over 5 very average small businesses</p>
             <div className="mt-6 grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
               <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                <img
-                  className="h-12"
-                  src="https://tailwindui.com/img/logos/tuple-logo-gray-400.svg"
-                  alt="Tuple"
-                />
+                <img className="h-12" src="https://tailwindui.com/img/logos/tuple-logo-gray-400.svg" alt="Tuple" />
               </div>
               <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                <img
-                  className="h-12"
-                  src="https://tailwindui.com/img/logos/mirage-logo-gray-400.svg"
-                  alt="Mirage"
-                />
+                <img className="h-12" src="https://tailwindui.com/img/logos/mirage-logo-gray-400.svg" alt="Mirage" />
               </div>
               <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                <img
-                  className="h-12"
-                  src="https://tailwindui.com/img/logos/statickit-logo-gray-400.svg"
-                  alt="StaticKit"
-                />
+                <img className="h-12" src="https://tailwindui.com/img/logos/statickit-logo-gray-400.svg" alt="StaticKit" />
               </div>
               <div className="col-span-1 flex justify-center md:col-span-2 md:col-start-2 lg:col-span-1">
-                <img
-                  className="h-12"
-                  src="https://tailwindui.com/img/logos/transistor-logo-gray-400.svg"
-                  alt="Transistor"
-                />
+                <img className="h-12" src="https://tailwindui.com/img/logos/transistor-logo-gray-400.svg" alt="Transistor" />
               </div>
               <div className="col-span-2 flex justify-center md:col-span-2 md:col-start-4 lg:col-span-1">
-                <img
-                  className="h-12"
-                  src="https://tailwindui.com/img/logos/workcation-logo-gray-400.svg"
-                  alt="Workcation"
-                />
+                <img className="h-12" src="https://tailwindui.com/img/logos/workcation-logo-gray-400.svg" alt="Workcation" />
               </div>
             </div>
           </div>
@@ -295,32 +246,21 @@ export default function Example() {
 
         {/* Alternating Feature Sections */}
         <div className="relative pt-16 pb-32 overflow-hidden">
-          <div
-            aria-hidden="true"
-            className="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-gray-100"
-          />
+          <div aria-hidden="true" className="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-gray-100" />
           <div className="relative">
             <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
               <div className="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
                 <div>
                   <div>
                     <span className="h-12 w-12 rounded-md flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-600">
-                      <InboxIcon
-                        className="h-6 w-6 text-white"
-                        aria-hidden="true"
-                      />
+                      <InboxIcon className="h-6 w-6 text-white" aria-hidden="true" />
                     </span>
                   </div>
                   <div className="mt-6">
-                    <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
-                      Stay on top of customer support
-                    </h2>
+                    <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">Stay on top of customer support</h2>
                     <p className="mt-4 text-lg text-gray-500">
-                      Semper curabitur ullamcorper posuere nunc sed. Ornare
-                      iaculis bibendum malesuada faucibus lacinia porttitor.
-                      Pulvinar laoreet sagittis viverra duis. In venenatis sem
-                      arcu pretium pharetra at. Lectus viverra dui tellus ornare
-                      pharetra.
+                      Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia porttitor. Pulvinar laoreet
+                      sagittis viverra duis. In venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus ornare pharetra.
                     </p>
                     <div className="mt-6">
                       <a
@@ -336,9 +276,8 @@ export default function Example() {
                   <blockquote>
                     <div>
                       <p className="text-base text-gray-500">
-                        &ldquo;Cras velit quis eros eget rhoncus lacus ultrices
-                        sed diam. Sit orci risus aenean curabitur donec aliquet.
-                        Mi venenatis in euismod ut.&rdquo;
+                        &ldquo;Cras velit quis eros eget rhoncus lacus ultrices sed diam. Sit orci risus aenean curabitur donec aliquet. Mi venenatis
+                        in euismod ut.&rdquo;
                       </p>
                     </div>
                     <footer className="mt-3">
@@ -350,9 +289,7 @@ export default function Example() {
                             alt=""
                           />
                         </div>
-                        <div className="text-base font-medium text-gray-700">
-                          Marcia Hill, Digital Marketing Manager
-                        </div>
+                        <div className="text-base font-medium text-gray-700">Marcia Hill, Digital Marketing Manager</div>
                       </div>
                     </footer>
                   </blockquote>
@@ -375,22 +312,14 @@ export default function Example() {
                 <div>
                   <div>
                     <span className="h-12 w-12 rounded-md flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-600">
-                      <SparklesIcon
-                        className="h-6 w-6 text-white"
-                        aria-hidden="true"
-                      />
+                      <SparklesIcon className="h-6 w-6 text-white" aria-hidden="true" />
                     </span>
                   </div>
                   <div className="mt-6">
-                    <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
-                      Better understand your customers
-                    </h2>
+                    <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">Better understand your customers</h2>
                     <p className="mt-4 text-lg text-gray-500">
-                      Semper curabitur ullamcorper posuere nunc sed. Ornare
-                      iaculis bibendum malesuada faucibus lacinia porttitor.
-                      Pulvinar laoreet sagittis viverra duis. In venenatis sem
-                      arcu pretium pharetra at. Lectus viverra dui tellus ornare
-                      pharetra.
+                      Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia porttitor. Pulvinar laoreet
+                      sagittis viverra duis. In venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus ornare pharetra.
                     </p>
                     <div className="mt-6">
                       <a
@@ -419,32 +348,21 @@ export default function Example() {
         {/* Gradient Feature Section */}
         <div className="bg-gradient-to-r from-purple-800 to-indigo-700">
           <div className="max-w-4xl mx-auto px-4 py-16 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:pt-24 lg:px-8">
-            <h2 className="text-3xl font-extrabold text-white tracking-tight">
-              Inbox support built for efficiency
-            </h2>
+            <h2 className="text-3xl font-extrabold text-white tracking-tight">Inbox support built for efficiency</h2>
             <p className="mt-4 max-w-3xl text-lg text-purple-200">
-              Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et
-              magna sit morbi lobortis. Blandit aliquam sit nisl euismod mattis
-              in.
+              Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis. Blandit aliquam sit nisl euismod mattis in.
             </p>
             <div className="mt-12 grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4 lg:gap-x-8 lg:gap-y-16">
               {features.map((feature) => (
                 <div key={feature.name}>
                   <div>
                     <span className="flex items-center justify-center h-12 w-12 rounded-md bg-white bg-opacity-10">
-                      <feature.icon
-                        className="h-6 w-6 text-white"
-                        aria-hidden="true"
-                      />
+                      <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
                     </span>
                   </div>
                   <div className="mt-6">
-                    <h3 className="text-lg font-medium text-white">
-                      {feature.name}
-                    </h3>
-                    <p className="mt-2 text-base text-purple-200">
-                      {feature.description}
-                    </p>
+                    <h3 className="text-lg font-medium text-white">{feature.name}</h3>
+                    <p className="mt-2 text-base text-purple-200">{feature.description}</p>
                   </div>
                 </div>
               ))}
@@ -472,31 +390,20 @@ export default function Example() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8 xl:grid xl:grid-cols-2 xl:grid-flow-col-dense xl:gap-x-8">
             <div className="relative pt-12 pb-64 sm:pt-24 sm:pb-64 xl:col-start-1 xl:pb-24">
               <h2 className="text-sm font-semibold tracking-wide uppercase">
-                <span className="bg-gradient-to-r from-purple-300 to-indigo-300 bg-clip-text text-transparent">
-                  Valuable Metrics
-                </span>
+                <span className="bg-gradient-to-r from-purple-300 to-indigo-300 bg-clip-text text-transparent">Valuable Metrics</span>
               </h2>
-              <p className="mt-3 text-3xl font-extrabold text-white">
-                Get actionable data that will help grow your business
-              </p>
+              <p className="mt-3 text-3xl font-extrabold text-white">Get actionable data that will help grow your business</p>
               <p className="mt-5 text-lg text-gray-300">
-                Rhoncus sagittis risus arcu erat lectus bibendum. Ut in
-                adipiscing quis in viverra tristique sem. Ornare feugiat viverra
-                eleifend fusce orci in quis amet. Sit in et vitae tortor, massa.
-                Dapibus laoreet amet lacus nibh integer quis. Eu vulputate diam
-                sit tellus quis at.
+                Rhoncus sagittis risus arcu erat lectus bibendum. Ut in adipiscing quis in viverra tristique sem. Ornare feugiat viverra eleifend
+                fusce orci in quis amet. Sit in et vitae tortor, massa. Dapibus laoreet amet lacus nibh integer quis. Eu vulputate diam sit tellus
+                quis at.
               </p>
               <div className="mt-12 grid grid-cols-1 gap-y-12 gap-x-6 sm:grid-cols-2">
                 {metrics.map((item) => (
                   <p key={item.id}>
-                    <span className="block text-2xl font-bold text-white">
-                      {item.stat}
-                    </span>
+                    <span className="block text-2xl font-bold text-white">{item.stat}</span>
                     <span className="mt-1 block text-base text-gray-300">
-                      <span className="font-medium text-white">
-                        {item.emphasis}
-                      </span>{" "}
-                      {item.rest}
+                      <span className="font-medium text-white">{item.emphasis}</span> {item.rest}
                     </span>
                   </p>
                 ))}
@@ -541,16 +448,11 @@ export default function Example() {
             <div className="grid grid-cols-2 gap-8 xl:col-span-2">
               <div className="md:grid md:grid-cols-2 md:gap-8">
                 <div>
-                  <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                    Solutions
-                  </h3>
+                  <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Solutions</h3>
                   <ul role="list" className="mt-4 space-y-4">
                     {footerNavigation.solutions.map((item) => (
                       <li key={item.name}>
-                        <a
-                          href={item.href}
-                          className="text-base text-gray-500 hover:text-gray-900"
-                        >
+                        <a href={item.href} className="text-base text-gray-500 hover:text-gray-900">
                           {item.name}
                         </a>
                       </li>
@@ -558,16 +460,11 @@ export default function Example() {
                   </ul>
                 </div>
                 <div className="mt-12 md:mt-0">
-                  <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                    Support
-                  </h3>
+                  <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Support</h3>
                   <ul role="list" className="mt-4 space-y-4">
                     {footerNavigation.support.map((item) => (
                       <li key={item.name}>
-                        <a
-                          href={item.href}
-                          className="text-base text-gray-500 hover:text-gray-900"
-                        >
+                        <a href={item.href} className="text-base text-gray-500 hover:text-gray-900">
                           {item.name}
                         </a>
                       </li>
@@ -577,16 +474,11 @@ export default function Example() {
               </div>
               <div className="md:grid md:grid-cols-2 md:gap-8">
                 <div>
-                  <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                    Company
-                  </h3>
+                  <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Company</h3>
                   <ul role="list" className="mt-4 space-y-4">
                     {footerNavigation.company.map((item) => (
                       <li key={item.name}>
-                        <a
-                          href={item.href}
-                          className="text-base text-gray-500 hover:text-gray-900"
-                        >
+                        <a href={item.href} className="text-base text-gray-500 hover:text-gray-900">
                           {item.name}
                         </a>
                       </li>
@@ -594,16 +486,11 @@ export default function Example() {
                   </ul>
                 </div>
                 <div className="mt-12 md:mt-0">
-                  <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                    Legal
-                  </h3>
+                  <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Legal</h3>
                   <ul role="list" className="mt-4 space-y-4">
                     {footerNavigation.legal.map((item) => (
                       <li key={item.name}>
-                        <a
-                          href={item.href}
-                          className="text-base text-gray-500 hover:text-gray-900"
-                        >
+                        <a href={item.href} className="text-base text-gray-500 hover:text-gray-900">
                           {item.name}
                         </a>
                       </li>
@@ -613,13 +500,8 @@ export default function Example() {
               </div>
             </div>
             <div className="mt-12 xl:mt-0">
-              <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                Subscribe to our newsletter
-              </h3>
-              <p className="mt-4 text-base text-gray-500">
-                The latest news, articles, and resources, sent to your inbox
-                weekly.
-              </p>
+              <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Subscribe to our newsletter</h3>
+              <p className="mt-4 text-base text-gray-500">The latest news, articles, and resources, sent to your inbox weekly.</p>
               <form className="mt-4 sm:flex sm:max-w-md">
                 <label htmlFor="email-address" className="sr-only">
                   Email address
@@ -647,19 +529,13 @@ export default function Example() {
           <div className="mt-12 border-t border-gray-200 pt-8 md:flex md:items-center md:justify-between lg:mt-16">
             <div className="flex space-x-6 md:order-2">
               {footerNavigation.social.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-gray-400 hover:text-gray-500"
-                >
+                <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500">
                   <span className="sr-only">{item.name}</span>
                   <item.icon className="h-6 w-6" aria-hidden="true" />
                 </a>
               ))}
             </div>
-            <p className="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
-              &copy; 2020 Workflow, Inc. All rights reserved.
-            </p>
+            <p className="mt-8 text-base text-gray-400 md:mt-0 md:order-1">&copy; 2020 Workflow, Inc. All rights reserved.</p>
           </div>
         </div>
       </footer>

@@ -1,11 +1,14 @@
+import { QueryProvider } from "api/ApiProvider";
 import Router from "./router/Router";
 import { StoreProvider } from "store/StoreContext";
 
 function App() {
   return (
-    <StoreProvider>
-      <Router />
-    </StoreProvider>
+    <QueryProvider>
+      <StoreProvider>
+        <Router />
+      </StoreProvider>
+    </QueryProvider>
   );
 }
 

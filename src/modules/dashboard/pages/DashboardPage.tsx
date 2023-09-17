@@ -10,6 +10,8 @@ import {
   TrashIcon,
   UsersIcon,
 } from "@heroicons/react/outline";
+import { observer } from "mobx-react-lite";
+import { useStore } from "store/StoreContext";
 
 const features = [
   {
@@ -169,11 +171,13 @@ const footerNavigation = {
   ],
 };
 
-// function classNames(...classes: any) {
-//   return classes.filter(Boolean).join(" ");
-// }
+const Dashboard = () => {
+  const {
+    auth: { accessToken, refreshToken },
+  } = useStore();
 
-export default function Example() {
+  console.log(accessToken, refreshToken);
+
   return (
     <div className="bg-white">
       <main>
@@ -541,4 +545,6 @@ export default function Example() {
       </footer>
     </div>
   );
-}
+};
+
+export default observer(Dashboard);

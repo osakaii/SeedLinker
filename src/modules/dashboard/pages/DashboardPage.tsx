@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
+import Container from "components/layout/Container";
 import { observer } from "mobx-react-lite";
 
 const blogPosts = [
@@ -31,7 +32,6 @@ const blogPosts = [
 ];
 
 const Dashboard = () => {
-
   return (
     <div className="bg-white">
       <main>
@@ -83,7 +83,7 @@ const Dashboard = () => {
                     </div>
                   </div>
                   <div className="pt-4 px-6 pb-12 flex justify-center">
-                    <button className="bg-slate-500 px-4 py-2 rounded-lg text-white hover:bg-slate-700" >Franchise catalog</button>
+                    <button className="bg-slate-500 px-4 py-2 rounded-lg text-white hover:bg-slate-700">Franchise catalog</button>
                   </div>
                 </div>
               ))}
@@ -92,7 +92,7 @@ const Dashboard = () => {
         </div>
 
         {/* About us section */}
-        <div className="mx-auto max-w-md px-4 pt-8 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl text-slate-600">
+        <Container>
           <div className="grid gap-12 grid-cols-1 md:grid-cols-2">
             <div className="flex gap-y-4 flex-col">
               <h2 className="text-2xl">Who we are?</h2>
@@ -115,7 +115,7 @@ const Dashboard = () => {
               />
             </div>
           </div>
-        </div>
+        </Container>
       </main>
     </div>
   );

@@ -22,12 +22,12 @@ const solutions = [
     href: AppRoutePath.Franchises,
   },
   {
-    name: "Bussiness for sale",
+    name: "Business for sale",
     description: "",
     href: AppRoutePath.Franchises,
   },
   {
-    name: "Events",
+    name: "Crowdfunding",
     description: "",
     href: AppRoutePath.Franchises,
   },

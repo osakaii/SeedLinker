@@ -1,5 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
+import { observer } from "mobx-react-lite";
+
 const blogPosts = [
   {
     id: 1,
@@ -8,16 +10,14 @@ const blogPosts = [
     href: "#",
     imageUrl:
       "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
-    preview:
-      "Explore franchise opportunities and open your own business with our support.",
+    preview: "Explore franchise opportunities and open your own business with our support.",
   },
   {
     id: 2,
     title: "Investment",
     subtitle: "Funding your future success",
     href: "#",
-    imageUrl:
-      "https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
     preview: "A detailed overview of investment opportunities in a franchise.",
   },
   {
@@ -25,15 +25,12 @@ const blogPosts = [
     title: "Business For Sale",
     subtitle: "Start your entrepreneurial journey with us",
     href: "#",
-    imageUrl:
-      "https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
     preview: "Get a ready-made business ready for profitable work.",
   },
 ];
-// function classNames(...classes: any) {
-//   return classes.filter(Boolean).join(" ");
-// }
 
+const Dashboard = () => {
   return (
     <div className="bg-white">
       <main>
@@ -55,26 +52,7 @@ const blogPosts = [
                   <span className="block text-white">Invest in ideas that</span>
                   <span className="block text-slate-200">change the world</span>
                 </h1>
-                <p className="mt-6 max-w-lg mx-auto text-center text-xl text-slate-200 sm:max-w-3xl">
-                  {/* Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-                  fugiat aliqua. */}
-                </p>
-                {/* <div className="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
-                  <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
-                    <a
-                      href="#"
-                      className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-slate-700 bg-white hover:bg-indigo-50 sm:px-8"
-                    >
-                      Get started
-                    </a>
-                    <a
-                      href="#"
-                      className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-slate-600 hover:bg-slate-700 sm:px-8"
-                    >
-                      Live demo
-                    </a>
-                  </div>
-                </div> */}
+                <p className="mt-6 max-w-lg mx-auto text-center text-xl text-slate-200 sm:max-w-3xl"></p>
               </div>
             </div>
           </div>
@@ -84,43 +62,27 @@ const blogPosts = [
         <div className="relative bg-gray-50 py-16 sm:py-24 lg:py-32">
           <div className="relative">
             <div className="text-center mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
-              <p className="mt-2 text-3xl font-extrabold text-slate-600 tracking-tight sm:text-4xl">
-                Information
-              </p>
+              <p className="mt-2 text-3xl font-extrabold text-slate-600 tracking-tight sm:text-4xl">Information</p>
               <p className="mt-5 mx-auto max-w-prose text-xl text-slate-500">
-                Here you will find all the necessary information about
-                opportunities, financing and ready-made business solutions.
+                Here you will find all the necessary information about opportunities, financing and ready-made business solutions.
               </p>
             </div>
             <div className="mt-12 bg-white mx-auto max-w-md px-4 grid gap-8 sm:max-w-lg sm:px-6 lg:px-8 lg:grid-cols-3 lg:max-w-7xl">
               {blogPosts.map((post: any) => (
-                <div
-                  key={post.id}
-                  className="flex flex-col rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition"
-                >
+                <div key={post.id} className="flex flex-col rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
                   <div className="flex-shrink-0">
-                    <img
-                      className="h-48 w-full object-cover"
-                      src={post.imageUrl}
-                      alt=""
-                    />
+                    <img className="h-48 w-full object-cover" src={post.imageUrl} alt="" />
                   </div>
                   <div className="flex-1 p-6 flex flex-col justify-between">
                     <div className="flex-1">
                       <a href={post.href} className="block mt-2">
-                        <p className="text-xl font-semibold text-slate-700 text-center">
-                          {post.title}
-                        </p>
-                        <p className="mt-3 text-base text-slate-500 text-center">
-                          {post.preview}
-                        </p>
+                        <p className="text-xl font-semibold text-slate-700 text-center">{post.title}</p>
+                        <p className="mt-3 text-base text-slate-500 text-center">{post.preview}</p>
                       </a>
                     </div>
                   </div>
                   <div className="pt-4 px-6 pb-12 flex justify-center">
-                    <button className="bg-slate-500 px-4 py-2 rounded-lg text-white hover:bg-slate-700">
-                      Franchise catalog
-                    </button>
+                    <button className="bg-slate-500 px-4 py-2 rounded-lg text-white hover:bg-slate-700">Franchise catalog</button>
                   </div>
                 </div>
               ))}
@@ -135,19 +97,13 @@ const blogPosts = [
               <h2 className="text-2xl">Who we are?</h2>
               <h1 className="text-3xl font-bold">About us</h1>
               <p>
-                Lorem ipsum dolor sit amet consectetur. Placerat sed tortor
-                aliquam sit montes lacinia odio viverra. Suspendisse id quam in
-                nisi lorem duis eleifend. Sodales mi lectus fermentum non.
-                Facilisis egestas morbi neque sapien. Lorem in viverra sed
-                viverra nec aliquam eget massa. Duis dignissim volutpat donec
-                urna. Aliquet proin augue id vel. Vel in ultrices sed
-                consectetur massa. Posuere venenatis laoreet facilisis tristique
-                viverra.
+                Lorem ipsum dolor sit amet consectetur. Placerat sed tortor aliquam sit montes lacinia odio viverra. Suspendisse id quam in nisi lorem
+                duis eleifend. Sodales mi lectus fermentum non. Facilisis egestas morbi neque sapien. Lorem in viverra sed viverra nec aliquam eget
+                massa. Duis dignissim volutpat donec urna. Aliquet proin augue id vel. Vel in ultrices sed consectetur massa. Posuere venenatis
+                laoreet facilisis tristique viverra.
               </p>
               <div className="pt-4">
-                <button className="bg-slate-500 px-4 py-2 rounded-lg text-white hover:bg-slate-700">
-                  Contact us
-                </button>
+                <button className="bg-slate-500 px-4 py-2 rounded-lg text-white hover:bg-slate-700">Contact us</button>
               </div>
             </div>
             <div className="hidden md:block px-6 py-12">

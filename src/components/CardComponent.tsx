@@ -15,7 +15,6 @@ type CardComponentProps = {
 };
 const CardComponent = ({ post }: CardComponentProps) => {
   const navigate = useNavigate();
-  console.log(post.href);
   return (
     <div key={post.id} className="flex flex-col rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
       <div className="flex-shrink-0">
@@ -23,11 +22,11 @@ const CardComponent = ({ post }: CardComponentProps) => {
       </div>
       <div className="flex-1 p-6 flex flex-col justify-between">
         <div className="flex-1">
-          <button className="block mt-2">
-            <p className="text-xl font-semibold text-slate-700 text-center">{post.title}</p>
-            <p className="mt-3 text-base text-slate-500 text-center">{post.preview}</p>
+          <div className="block mt-2">
+            <p className="text-xl font-semibold text-slate-700 text-center">wreferf</p>
+            <p className="mt-3 text-base text-slate-500 text-center">fwerfewf</p>
             {post.prices ? <p className="mt-3 text-base text-slate-500 text-center">{post.prices}</p> : null}
-          </button>
+          </div>
         </div>
       </div>
       <div className="pt-4 px-6 pb-12 flex justify-center">

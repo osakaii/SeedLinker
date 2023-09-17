@@ -1,12 +1,13 @@
 import { Popover, Transition } from "@headlessui/react";
 import { XIcon, MenuIcon } from "@heroicons/react/solid";
 import { getUserInfo } from "api/userApi";
-import { Fragment, useEffect, useState } from "react";
+import { Fragment } from "react";
 import { useNavigate } from "react-router-dom";
 import { AppRoutePath } from "router/types";
 import { observer } from "mobx-react-lite";
-import { User } from "api/types/user";
 import { useStore } from "store/StoreContext";
+import { useQuery } from "react-query";
+import Loader from "./Loader";
 
 const solutions = [
   {
@@ -32,25 +33,16 @@ const solutions = [
 ];
 
 const Navbar = () => {
-  const [user, setUser] = useState<User | null>();
   const {
     auth: { logout },
   } = useStore();
   const navigate = useNavigate();
 
-  const getData = async () => {
-    const response = await getUserInfo();
-    setUser(response.data);
-  };
+  const { data: user, isLoading } = useQuery("user", getUserInfo);
 
   const signOut = () => {
     logout();
-    setUser(null);
   };
-
-  useEffect(() => {
-    getData();
-  }, []);
 
   return (
     <header>
@@ -76,8 +68,10 @@ const Navbar = () => {
             ))}
           </Popover.Group>
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-            {user?.username ? (
-              <>
+            {isLoading ? (
+              <Loader size="medium" />
+            ) : user?.username ? (
+              <button onClick={() => navigate(AppRoutePath.Profile)} className="flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                 </svg>
@@ -85,7 +79,7 @@ const Navbar = () => {
                 <button className="ml-5 py-2 px-3 bg-red-400 text-white rounded-md" onClick={signOut}>
                   logout
                 </button>
-              </>
+              </button>
             ) : (
               <>
                 <button
@@ -140,18 +134,29 @@ const Navbar = () => {
               </div>
               <div className="py-6 px-5">
                 <div className="mt-4">
-                  <button
-                    onClick={() => navigate(AppRoutePath.SignUp)}
-                    className="w-full flex items-center justify-center bg-gradient-to-r from-slate-600 to-slate-600 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white hover:from-slate-700 hover:to-slate-700"
-                  >
-                    Sign up
-                  </button>
-                  <p className="mt-6 text-center text-base font-medium text-slate-500">
-                    Already have an account?
-                    <button className="text-slate-600 ml-1" onClick={() => navigate(AppRoutePath.SignIn)}>
-                      Sign in
-                    </button>
-                  </p>
+                  {user?.username ? (
+                    <>
+                      <p className="mt-6 text-center text-base font-medium text-slate-500">{user.username}</p>
+                      <p className="mt-6 text-center text-base font-medium text-slate-500">
+                        <button className="text-slate-600 ml-1">logout</button>
+                      </p>
+                    </>
+                  ) : (
+                    <>
+                      <button
+                        onClick={() => navigate(AppRoutePath.SignUp)}
+                        className="w-full flex items-center justify-center bg-gradient-to-r from-slate-600 to-slate-600 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white hover:from-slate-700 hover:to-slate-700"
+                      >
+                        Sign up
+                      </button>
+                      <p className="mt-6 text-center text-base font-medium text-slate-500">
+                        Already have an account?
+                        <button className="text-slate-600 ml-1" onClick={() => navigate(AppRoutePath.SignIn)}>
+                          Sign in
+                        </button>
+                      </p>
+                    </>
+                  )}
                 </div>
               </div>
             </div>

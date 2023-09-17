@@ -3,6 +3,7 @@ import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } 
 import Root from "./Root";
 import { DashboardRoutes } from "modules/dashboard/routes";
 import { FranchiseRoutes } from "modules/franchise/routes";
+import { UserRoutes } from "modules/user/routes";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -11,6 +12,7 @@ const router = createBrowserRouter(
       <Route path="" element={<Root />}>
         {DashboardRoutes}
         {FranchiseRoutes}
+        {UserRoutes}
       </Route>
     </Route>
   )

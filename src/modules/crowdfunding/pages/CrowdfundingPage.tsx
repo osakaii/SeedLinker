@@ -42,7 +42,7 @@ const CrowdfundingPage = () => {
                             imageUrl:
                                 "https://allo.tochka.com/storage/app/media/articles/2021/Prodazha_bisnesa/1114x596_prodaja_cropped.png",
                             id: index,
-                            href: AppRoutePath.FranchisePage,
+                            href: AppRoutePath.CrowdfundingPage,
                             title: name,
                             subtitle: description,
                             preview: description,

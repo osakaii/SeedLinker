@@ -7,7 +7,7 @@ import viteSvgr from "vite-plugin-svgr";
 export default defineConfig({
   plugins: [react(), viteTsconfigPaths(), viteSvgr()],
   server: {
-    port: 3001,
+    port: 3002,
     open: true,
   },
 });

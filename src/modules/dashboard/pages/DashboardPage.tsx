@@ -34,7 +34,6 @@ const blogPosts = [
 //   return classes.filter(Boolean).join(" ");
 // }
 
-export default function Example() {
   return (
     <div className="bg-white">
       <main>
@@ -163,4 +162,6 @@ export default function Example() {
       </main>
     </div>
   );
-}
+};
+
+export default observer(Dashboard);

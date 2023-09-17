@@ -31,6 +31,7 @@ const blogPosts = [
 ];
 
 const Dashboard = () => {
+
   return (
     <div className="bg-white">
       <main>
@@ -82,7 +83,7 @@ const Dashboard = () => {
                     </div>
                   </div>
                   <div className="pt-4 px-6 pb-12 flex justify-center">
-                    <button className="bg-slate-500 px-4 py-2 rounded-lg text-white hover:bg-slate-700">Franchise catalog</button>
+                    <button className="bg-slate-500 px-4 py-2 rounded-lg text-white hover:bg-slate-700" >Franchise catalog</button>
                   </div>
                 </div>
               ))}

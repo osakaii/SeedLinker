@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import parse from "html-react-parser";
 
 export type CardProps = {
   id: number;
@@ -20,11 +21,11 @@ const CardComponent = ({ post }: CardComponentProps) => {
       <div className="flex-shrink-0">
         <img className="h-48 w-full object-cover" src={post.imageUrl} alt="" />
       </div>
-      <div className="flex-1 p-6 flex flex-col justify-between">
-        <div className="flex-1">
-          <div className="block mt-2">
-            <p className="text-xl font-semibold text-slate-700 text-center">wreferf</p>
-            <p className="mt-3 text-base text-slate-500 text-center">fwerfewf</p>
+      <div className="flex-1 p-6 flex flex-col justify-betwee  ">
+        <div className="flex-1 ">
+          <div className="block mt-2 overflow-hidden h-20 text-ellipsis">
+            <p className="text-xl font-semibold text-slate-700 text-center">{post.title}</p>
+            <p className="mt-3 text-base text-slate-500 text-center  ">{parse(post.preview)}</p>
             {post.prices ? <p className="mt-3 text-base text-slate-500 text-center">{post.prices}</p> : null}
           </div>
         </div>

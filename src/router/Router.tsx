@@ -1,10 +1,5 @@
 import { AuthRoutes } from "modules/auth/routes";
-import {
-  Route,
-  RouterProvider,
-  createBrowserRouter,
-  createRoutesFromElements,
-} from "react-router-dom";
+import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from "react-router-dom";
 import Root from "./Root";
 import { DashboardRoutes } from "modules/dashboard/routes";
 

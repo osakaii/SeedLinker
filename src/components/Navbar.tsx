@@ -1,39 +1,14 @@
 import { Popover, Transition } from "@headlessui/react";
-import {
-  ChevronDownIcon,
-  XMarkIcon,
-  Bars3Icon as MenuIcon,
-  InboxIcon,
-  QuestionMarkCircleIcon,
-} from "@heroicons/react/20/solid";
+import { ChevronDownIcon, XMarkIcon, Bars3Icon as MenuIcon, InboxIcon, QuestionMarkCircleIcon } from "@heroicons/react/20/solid";
 import { BugAntIcon } from "@heroicons/react/24/outline";
 import { GlobeAsiaAustraliaIcon } from "@heroicons/react/24/solid";
-import { Logo } from "assets/icon";
 import classNames from "classnames";
 import { Fragment } from "react";
-import { AppRoutePath } from "router/types";
-
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const navItems = [
-  {
-    label: "Инвестици",
-    path: AppRoutePath.Dashboard,
-  },
-  {
-    label: "Франшизы",
-    path: AppRoutePath.Dashboard,
-  },
-  {
-    label: "Готовый бизнес",
-    path: AppRoutePath.Dashboard,
-  },
-];
 
 const solutions = [
   {
     name: "Inbox",
-    description:
-      "Get a better understanding of where your traffic is coming from.",
+    description: "Get a better understanding of where your traffic is coming from.",
     href: "#",
     icon: InboxIcon,
   },
@@ -65,11 +40,7 @@ const Navbar = () => {
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <a href="#">
               <span className="sr-only">Workflow</span>
-              <img
-                className="h-8 w-auto sm:h-10"
-                src="https://tailwindui.com/img/logos/workflow-mark-purple-600-to-indigo-600.svg"
-                alt=""
-              />
+              <img className="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-purple-600-to-indigo-600.svg" alt="" />
             </a>
           </div>
           <div className="-mr-2 -my-2 md:hidden">
@@ -90,10 +61,7 @@ const Navbar = () => {
                   >
                     <span>Solutions</span>
                     <ChevronDownIcon
-                      className={classNames(
-                        open ? "text-gray-600" : "text-gray-400",
-                        "ml-2 h-5 w-5 group-hover:text-gray-500"
-                      )}
+                      className={classNames(open ? "text-gray-600" : "text-gray-400", "ml-2 h-5 w-5 group-hover:text-gray-500")}
                       aria-hidden="true"
                     />
                   </Popover.Button>
@@ -111,24 +79,13 @@ const Navbar = () => {
                       <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                         <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
                           {solutions.map((item) => (
-                            <a
-                              key={item.name}
-                              href={item.href}
-                              className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
-                            >
+                            <a key={item.name} href={item.href} className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
                               <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-purple-600 to-indigo-600 text-white sm:h-12 sm:w-12">
-                                <item.icon
-                                  className="h-6 w-6"
-                                  aria-hidden="true"
-                                />
+                                <item.icon className="h-6 w-6" aria-hidden="true" />
                               </div>
                               <div className="ml-4">
-                                <p className="text-base font-medium text-gray-900">
-                                  {item.name}
-                                </p>
-                                <p className="mt-1 text-sm text-gray-500">
-                                  {item.description}
-                                </p>
+                                <p className="text-base font-medium text-gray-900">{item.name}</p>
+                                <p className="mt-1 text-sm text-gray-500">{item.description}</p>
                               </div>
                             </a>
                           ))}
@@ -140,30 +97,18 @@ const Navbar = () => {
               )}
             </Popover>
 
-            <a
-              href="#"
-              className="text-base font-medium text-gray-500 hover:text-gray-900"
-            >
+            <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
               Pricing
             </a>
-            <a
-              href="#"
-              className="text-base font-medium text-gray-500 hover:text-gray-900"
-            >
+            <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
               Partners
             </a>
-            <a
-              href="#"
-              className="text-base font-medium text-gray-500 hover:text-gray-900"
-            >
+            <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
               Company
             </a>
           </Popover.Group>
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-            <a
-              href="#"
-              className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
-            >
+            <a href="#" className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
               Sign in
             </a>
             <a
@@ -184,19 +129,12 @@ const Navbar = () => {
           leaveFrom="opacity-100 scale-100"
           leaveTo="opacity-0 scale-95"
         >
-          <Popover.Panel
-            focus
-            className="absolute z-30 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
-          >
+          <Popover.Panel focus className="absolute z-30 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
             <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
               <div className="pt-5 pb-6 px-5">
                 <div className="flex items-center justify-between">
                   <div>
-                    <img
-                      className="h-8 w-auto"
-                      src="https://tailwindui.com/img/logos/workflow-mark-purple-600-to-indigo-600.svg"
-                      alt="Workflow"
-                    />
+                    <img className="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-purple-600-to-indigo-600.svg" alt="Workflow" />
                   </div>
                   <div className="-mr-2">
                     <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -208,17 +146,11 @@ const Navbar = () => {
                 <div className="mt-6">
                   <nav className="grid grid-cols-1 gap-7">
                     {solutions.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
-                      >
+                      <a key={item.name} href={item.href} className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
                         <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
                           <item.icon className="h-6 w-6" aria-hidden="true" />
                         </div>
-                        <div className="ml-4 text-base font-medium text-gray-900">
-                          {item.name}
-                        </div>
+                        <div className="ml-4 text-base font-medium text-gray-900">{item.name}</div>
                       </a>
                     ))}
                   </nav>
@@ -226,22 +158,13 @@ const Navbar = () => {
               </div>
               <div className="py-6 px-5">
                 <div className="grid grid-cols-2 gap-4">
-                  <a
-                    href="#"
-                    className="text-base font-medium text-gray-900 hover:text-gray-700"
-                  >
+                  <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
                     Pricing
                   </a>
-                  <a
-                    href="#"
-                    className="text-base font-medium text-gray-900 hover:text-gray-700"
-                  >
+                  <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
                     Partners
                   </a>
-                  <a
-                    href="#"
-                    className="text-base font-medium text-gray-900 hover:text-gray-700"
-                  >
+                  <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
                     Company
                   </a>
                 </div>

@@ -5,7 +5,7 @@ import viteSvgr from "vite-plugin-svgr";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react({ jsxImportSource: "@emotion/react" }), viteTsconfigPaths(), viteSvgr()],
+  plugins: [react(), viteTsconfigPaths(), viteSvgr()],
   server: {
     port: 3001,
     open: true,

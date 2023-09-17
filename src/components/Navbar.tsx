@@ -29,7 +29,7 @@ const solutions = [
   {
     name: "Crowdfunding",
     description: "",
-    href: AppRoutePath.Franchises,
+    href: AppRoutePath.Crowdfunding,
   },
 ];
 

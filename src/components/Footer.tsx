@@ -7,7 +7,7 @@ const navigation = {
         {name: "Investment", href: AppRoutePath.Franchises},
         {name: "Franchises", href: AppRoutePath.Franchises},
         {name: "Business for sale", href: AppRoutePath.Franchises},
-        {name: "Crowdfunding", href: AppRoutePath.Franchises},
+        {name: "crowdfunding", href: AppRoutePath.Crowdfunding},
         {name: "Contact", href: AppRoutePath.Franchises},
         {name: "AboutUs", href: AppRoutePath.Dashboard},
         {name: "FAQs", href: AppRoutePath.Dashboard},

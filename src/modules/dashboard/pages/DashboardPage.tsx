@@ -1,33 +1,38 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
+import CardComponent, { CardProps } from "components/CardComponent";
 import Container from "components/layout/Container";
 import { observer } from "mobx-react-lite";
+import { AppRoutePath } from "router/types";
 
-const blogPosts = [
+const blogPosts: CardProps[] = [
   {
     id: 1,
     title: "Franchises",
     subtitle: "Become part of a successful network.",
-    href: "#",
+    href: AppRoutePath.Franchises,
     imageUrl:
       "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
     preview: "Explore franchise opportunities and open your own business with our support.",
+    buttonContent: "Franchise catalog",
   },
   {
     id: 2,
     title: "Investment",
     subtitle: "Funding your future success",
-    href: "#",
+    href: AppRoutePath.Franchises,
     imageUrl: "https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
     preview: "A detailed overview of investment opportunities in a franchise.",
+    buttonContent: "Investment catalog",
   },
   {
     id: 3,
     title: "Business For Sale",
     subtitle: "Start your entrepreneurial journey with us",
-    href: "#",
+    href: AppRoutePath.Franchises,
     imageUrl: "https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
     preview: "Get a ready-made business ready for profitable work.",
+    buttonContent: "Business catalog",
   },
 ];
 
@@ -69,23 +74,8 @@ const Dashboard = () => {
               </p>
             </div>
             <div className="mt-12 bg-white mx-auto max-w-md px-4 grid gap-8 sm:max-w-lg sm:px-6 lg:px-8 lg:grid-cols-3 lg:max-w-7xl">
-              {blogPosts.map((post: any) => (
-                <div key={post.id} className="flex flex-col rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
-                  <div className="flex-shrink-0">
-                    <img className="h-48 w-full object-cover" src={post.imageUrl} alt="" />
-                  </div>
-                  <div className="flex-1 p-6 flex flex-col justify-between">
-                    <div className="flex-1">
-                      <a href={post.href} className="block mt-2">
-                        <p className="text-xl font-semibold text-slate-700 text-center">{post.title}</p>
-                        <p className="mt-3 text-base text-slate-500 text-center">{post.preview}</p>
-                      </a>
-                    </div>
-                  </div>
-                  <div className="pt-4 px-6 pb-12 flex justify-center">
-                    <button className="bg-slate-500 px-4 py-2 rounded-lg text-white hover:bg-slate-700">Franchise catalog</button>
-                  </div>
-                </div>
+              {blogPosts.map((post: CardProps) => (
+                <CardComponent post={post} key={post.id} />
               ))}
             </div>
           </div>

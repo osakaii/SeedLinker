@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { SignUpForm } from "../types";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { boolean, number, object, ref, string } from "yup";
-import { signUp } from "api/auth/authApi";
+import { signUp } from "api/authApi";
 import { useNavigate } from "react-router-dom";
 import { AppRoutePath } from "router/types";
 

@@ -1,5 +1,5 @@
-
 import { makeAutoObservable } from "mobx";
+import { makePersistable } from "mobx-persist-store";
 
 export type UserTokens = {
   accessToken: string;
@@ -25,5 +25,10 @@ export default class AuthStore {
   }
 
   async init() {
+    await makePersistable(this, {
+      name: "AuthStore",
+      properties: ["refreshToken"],
+      storage: window.localStorage,
+    });
   }
 }

@@ -27,16 +27,15 @@ api.interceptors.response.use(
     const {
       auth: { setAccessToken, refreshToken, logout },
     } = await store.init();
+
     if (error.response.status === 401) {
       if (!originalRequest._retry) {
         originalRequest._retry = true;
-
         try {
           const response = await axios.post(`${API_URL}auth/token/refresh/`, {
-            refreshToken,
+            refresh: refreshToken,
           });
           const { access } = response.data;
-          console.log(access);
           setAccessToken(access);
 
           originalRequest.headers.Authorization = `Bearer ${access}`;

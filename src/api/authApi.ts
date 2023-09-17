@@ -1,5 +1,4 @@
 import api, { API_URL } from "api";
-import { UserTokens } from "modules/auth/store/AuthStore";
 import { SignInForm, SignUpForm } from "modules/auth/types";
 import axios from "axios";
 
@@ -9,8 +8,8 @@ export const signUp = async (values: SignUpForm) => {
 };
 
 export const signIn = async (values: SignInForm) => {
-  const response = await api.post<SignInForm, UserTokens>("auth/token/", values);
-  return response;
+  const response = await api.post<{ refresh: string; access: string }>("auth/token/", values);
+  return response.data;
 };
 
 export const getAccess = async (refresh: string) => {

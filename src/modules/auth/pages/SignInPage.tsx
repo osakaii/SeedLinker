@@ -5,7 +5,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { object, string } from "yup";
 import { useNavigate } from "react-router-dom";
 import { AppRoutePath } from "router/types";
-import { signIn } from "api/auth/authApi";
+import { signIn } from "api/authApi";
 import { useStore } from "store/StoreContext";
 
 const defaultValues: SignInForm = {
@@ -31,8 +31,8 @@ const SignInPage = () => {
 
   const onSubmit = async (values: SignInForm) => {
     try {
-      const response = await signIn(values);
-      setUserTokens(response);
+      const { access: accessToken, refresh: refreshToken } = await signIn(values);
+      setUserTokens({ accessToken, refreshToken });
 
       navigate(AppRoutePath.Dashboard);
     } catch (error) {

@@ -23,9 +23,9 @@ const CardComponent = ({ post }: CardComponentProps) => {
       </div>
       <div className="flex-1 p-6 flex flex-col justify-betwee  ">
         <div className="flex-1 ">
-          <div className="block mt-2 overflow-hidden h-20 text-ellipsis">
+          <div className="block mt-2 overflow-hidden text-ellipsis">
             <p className="text-xl font-semibold text-slate-700 text-center">{post.title}</p>
-            <p className="mt-3 text-base text-slate-500 text-center  ">{parse(post.preview)}</p>
+            <p className="mt-3 text-base text-slate-500 text-center line-clamp-2">{parse(post.preview)}</p>
             {post.prices ? <p className="mt-3 text-base text-slate-500 text-center">{post.prices}</p> : null}
           </div>
         </div>

@@ -30,7 +30,9 @@ const plans = [
 const FranchiseDetailPage = () => {
   const { id } = useParams<{ id: string }>();
 
-  const { data, isLoading } = useQuery("detailFranchise", () => getFranchise(id || ""));
+  const { data, isLoading } = useQuery("detailFranchise", () =>
+    getFranchise(id || "")
+  );
 
   const slides = data?.images.map((image) => ({
     image,
@@ -44,15 +46,24 @@ const FranchiseDetailPage = () => {
           <>
             <h1 className="text-3xl font-semibold">Shoro franchize</h1>
             <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
-              <div>
+              <div className="">
                 <DetailSwiper slides={slides} />
               </div>
+              <div className="flex flex-col gap-y-4">
               <div>
-                <FranchiseInformation yearOfEstablishment={1992} franchiseEnterprises={11} monthlyTurnover={0} numberOfEmployees={900} />
+                  <FranchiseInformation
+                    yearOfEstablishment={1992}
+                    franchiseEnterprises={11}
+                    monthlyTurnover={0}
+                    numberOfEmployees={900}
+                  />
+                </div>
+                <div className="">
+                  <ProjectPlan plans={plans} />
+                </div>
               </div>
-              <div>{parse(data?.description || "")}</div>
-              <div className="">
-                <ProjectPlan plans={plans} />
+              <div className="md:col-span-2">
+                {parse(data?.description || "")}
               </div>
             </div>
           </>

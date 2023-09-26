@@ -26,7 +26,7 @@ export default function DetailSwiper(props: Props) {
       >
         {props.slides?.map((slide) => (
           <SwiperSlide key={slide.image}>
-            <img src={slide.image} alt={slide.image} />
+            <img className="aspect-[5/3] bg-slate-100" src={slide.image} alt={"empty"} />
           </SwiperSlide>
         ))}
       </Swiper>
